@@ -5,7 +5,7 @@
 /**
  * main - the entry point
  *
- * Description: a program that prints the alphabet in lowercase,
+ * Description: a program that prints the alphabet in reverse,
  * followed by a new line.
  *
  * Return: returns zero once completion successfully
