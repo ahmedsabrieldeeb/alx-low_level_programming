@@ -18,7 +18,7 @@ int main(void)
 			53, 44, 32, 54, 44, 32, 55, 44, 32, 56, 44, 32, 57};
 	int i;
 
-	for (i = 0; i < (sizeof(comb) / sizeof(comb[0])) ; i++)
+	for (i = 0; i < (int)(sizeof(comb) / sizeof(comb[0])) ; i++)
 	{
 		putchar(comb[i]);
 	}
