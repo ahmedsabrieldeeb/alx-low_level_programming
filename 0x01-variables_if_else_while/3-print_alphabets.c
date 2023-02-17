@@ -22,9 +22,9 @@ int main(void)
 		putchar(alph[i]);
 	}
 	for (i = 0; i < 26; i++)
-        {
-                putchar(toupper(alph[i]));
-        }
+	{
+		putchar(toupper(alph[i]));
+	}
 	putchar('\n');
 	return (0);
 }
