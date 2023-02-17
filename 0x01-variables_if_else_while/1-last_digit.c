@@ -19,7 +19,8 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 
-	int res = abs(n) - (abs(n) / 10) * 10;
+	int res;
+	res = abs(n) - (abs(n) / 10) * 10;
 
 	if (res == 0)
 	{
