@@ -15,7 +15,7 @@ int main(void)
 {
 	char alph[] = "abcdefghijklmnopqrstuvwxyz";
 
-	for (int i; i < 26; i++)
+	for (int i = 0; i < 26; i++)
 	{
 		putchar(alph[i]);
 	}
