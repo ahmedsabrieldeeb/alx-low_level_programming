@@ -1,5 +1,4 @@
 #include <unistd.h>
-#include <stdio.h>
 
 /**
  * _putchar - writes the character c to stdout
@@ -8,10 +7,7 @@
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
+int _putchar(char c);
 /**
  * print_alphabet - the entry point
  *
@@ -20,15 +16,4 @@ int _putchar(char c)
  *
  * Return: return nothing "void"
  */
-void print_alphabet(void)
-{
-	char alph[] = "abcdefghijklmnopqrstuvwxyz";
-	int i;
-
-	for (i = 0; i < 26; i++)
-	{
-		putchar(alph[i]);
-	}
-	putchar('\n');
-	return;
-}
+void print_alphabet(void);
