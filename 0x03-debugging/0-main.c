@@ -1,6 +1,6 @@
 #include "main.h"
 
-/*
+/**
  * main - the entry point
  *
  * Description: this function tests just other function
