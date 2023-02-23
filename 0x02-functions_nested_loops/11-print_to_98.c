@@ -47,7 +47,7 @@ void print_to_98(int n)
         {
             _putchar((i / 100) + '0');
 			_putchar(((i - ((i / 100) * 100)) / 10) + '0');
-			_Putchar(((i - ((i / 100) * 100)) % 10) + '0');
+			_putchar(((i - ((i / 100) * 100)) % 10) + '0');
             _putchar(',');
             _putchar(' ');
         }
