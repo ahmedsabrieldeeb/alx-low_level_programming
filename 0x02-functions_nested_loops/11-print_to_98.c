@@ -12,58 +12,28 @@
 
 void print_to_98(int n)
 {
-	int i;
-
-	if (n < 98)
+	if (n <= 98)
 	{
-		for (i = n; i <= 98; i++)
+		for (; n <= 98; n++)
 		{
-			if (i < 10)
-			{
-				_putchar(i + '0');
-				_putchar(',');
-				_putchar(' ');
-			}
-			else
-			{
-				if (i != 98)
-				{
-					_putchar((i / 10) + '0');
-					_putchar((i % 10) + '0');
-					_putchar(',');
-					_putchar(' ');
-				}
-				_putchar((i / 10) + '0');
-				_putchar((i % 10) + '0');
-			}
+			printf("%d", n);
+
+			if (n == 98)
+				continue;
+			printf(", ");
 		}
-		_putchar('\n');
+		printf("\n");
 	}
 	else
 	{
-		for (i = n; i > 97; i--)
-    {
-        if (i >= 100)
-        {
-            _putchar((i / 100) + '0');
-			_putchar(((i - ((i / 100) * 100)) / 10) + '0');
-			_putchar(((i - ((i / 100) * 100)) % 10) + '0');
-            _putchar(',');
-            _putchar(' ');
-        }
-        else
-        {
-            if (i != 98)
-            {
-                _putchar((i / 10) + '0');
-                _putchar((i % 10) + '0');
-                _putchar(',');
-                _putchar(' ');
-            }
-            _putchar((i / 10) + '0');
-            _putchar((i % 10) + '0');
-        }
-    }
-    _putchar('\n');
+		for (; n >= 98; n--)
+		{
+			printf("%d", n);
+
+			if (n == 98)
+				continue;
+			printf(", ");
+		}
+		printf("\n");
 	}
 }
