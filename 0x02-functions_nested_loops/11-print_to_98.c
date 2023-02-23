@@ -12,9 +12,7 @@
 
 void print_to_98(int n)
 {
-	int counts, i;
-
-	counts = 98 - n;
+	int i;
 
 	for (i = n; i <= 98; i++)
 	{
