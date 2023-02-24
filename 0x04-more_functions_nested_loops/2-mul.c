@@ -2,7 +2,8 @@
 
 /**
  * mul - the function name
- * @a,@b: the numbers to be multiplied (integers) 
+ * @a: the first integer
+ * @b: the second integer
  *
  * Description: a function that multiplies two integers
  *
