@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include "main.h"
 /**
  * main - function name
  *
@@ -49,7 +49,7 @@ int main(void)
 			printf("%d ", i);
 		}
 	}
-
 	printf("%c", '\n');
+
 	return (0);
 }
