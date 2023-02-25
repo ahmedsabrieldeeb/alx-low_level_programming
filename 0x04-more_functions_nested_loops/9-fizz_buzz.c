@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * FizzBuzz - function name
+ * main - function name
  *
  * Description: a program that prints the numbers from 1 to 100,
  * followed by a new line. But for multiples of three print Fizz
@@ -9,9 +9,9 @@
  * For numbers which are multiples of both three and five print
  * FizzBuzz.
  *
- * Return: void
+ * Return: 0 On success
  */
-void FizzBuzz(void)
+int main(void)
 {
 	int i;
 
@@ -49,16 +49,6 @@ void FizzBuzz(void)
 		}
 	}
 	printf("%c", '\n');
-}
-/**
- * main - entry point
- *
- * Description: calling the FizzBuzz function
- *
- * Return: 0 On success
- */
-int main(void)
-{
-	FizzBuzz();
-	return (0);
+
+	retrun(0);
 }
