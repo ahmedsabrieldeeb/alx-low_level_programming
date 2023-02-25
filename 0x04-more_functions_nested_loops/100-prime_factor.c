@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 /**
  * is_prime - function name
  * @n: the positive integer number to be tested
@@ -38,9 +39,9 @@ int is_prime(int n)
  */
 int main(void)
 {
-	long long n = 612852475143;
-	long long largest = 0;
-	long long i, d;
+	long n = 612852475143;
+	long largest = 0;
+	long i, d;
 
 	d = n;
 
@@ -55,7 +56,7 @@ int main(void)
 			}
 		}
 	}
-	printf("%lld", largest);
+	printf("%ld", largest);
 	printf("\n");
 	return (0);
 }
