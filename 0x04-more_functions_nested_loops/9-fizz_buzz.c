@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 /**
  * FizzBuzz - function name
  *
@@ -10,7 +11,6 @@
  *
  * Return: void
  */
-
 void FizzBuzz(void)
 {
 	int i;
