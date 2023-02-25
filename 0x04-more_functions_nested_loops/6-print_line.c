@@ -18,6 +18,8 @@ void print_line(int n)
 	}
 	else
 	{
+		i = 0;
+
 		while (i < n)
 		{
 			_putchar('_');
