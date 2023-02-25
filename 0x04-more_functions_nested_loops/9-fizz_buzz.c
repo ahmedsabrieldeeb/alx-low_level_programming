@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "main.h"
 
 /**
  * FizzBuzz - function name
@@ -50,4 +49,16 @@ void FizzBuzz(void)
 		}
 	}
 	printf("%c", '\n');
+}
+/**
+ * main - entry point
+ *
+ * Description: calling the FizzBuzz function
+ *
+ * Return: 0 On success
+ */
+int main(void)
+{
+	FizzBuzz();
+	return (0);
 }
