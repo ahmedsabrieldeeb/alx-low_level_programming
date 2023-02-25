@@ -45,14 +45,14 @@ int main(void)
 
 	d = n;
 
-	for (i = 2; i <= (d / 2); i++)
+	for (i = 2; i <= d; i++)
 	{
 		if (is_prime(i))
 		{
 			if (n % i == 0)
 			{
 				largest = i;
-				d = d / 2;
+				d = d / i;
 			}
 		}
 	}
