@@ -22,31 +22,24 @@ int main(void)
 		{
 			if ((i % 5) == 0)
 			{
-				printf("FizzBuzz ");
-			}
-			printf("Fizz ");
-		}
-		else if ((i % 5) == 0)
-		{
-			if ((i % 3) == 0)
-			{
-				printf("FizzBuzz ");
+				printf("FizzBuzz");
 			}
 			else
 			{
-				if (i == 100)
-				{
-					printf("Buzz");
-				}
-				else
-				{
-					printf("Buzz ");
-				}
+				printf("Fizz");
 			}
+		}
+		else if ((i % 5) == 0)
+		{
+			printf("Buzz");
 		}
 		else
 		{
-			printf("%d ", i);
+			printf("%d", i);
+		}
+		if (i != 100)
+		{
+			printf(" ");
 		}
 	}
 	printf("\n");
