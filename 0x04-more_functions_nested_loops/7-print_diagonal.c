@@ -1,5 +1,6 @@
 #include "main.h"
 
+
 /**
  * print_diagonal - function name
  * @n: is an integer argument used as to print \
@@ -25,6 +26,7 @@ void print_diagonal(int n)
 			{
 				_putchar(' ');
 			}
+
 			_putchar('\\');
 			_putchar('\n');
 		}
