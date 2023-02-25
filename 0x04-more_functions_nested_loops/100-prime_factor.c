@@ -9,7 +9,7 @@
  *
  * Return: 1 if true, 0 if false
  */
-int is_prime(int n)
+int is_prime(long n)
 {
 	if (n < 2)
 	{
