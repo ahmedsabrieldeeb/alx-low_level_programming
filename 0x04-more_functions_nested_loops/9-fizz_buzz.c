@@ -50,5 +50,5 @@ int main(void)
 	}
 	printf("%c", '\n');
 
-	retrun(0);
+	return(0);
 }
