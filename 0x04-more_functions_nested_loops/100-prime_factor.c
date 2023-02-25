@@ -52,6 +52,6 @@ int main(void)
 			}
 		}
 	}
-	printf("%d", largest);
+	printf("%d\n", largest);
 	return (0);
 }
