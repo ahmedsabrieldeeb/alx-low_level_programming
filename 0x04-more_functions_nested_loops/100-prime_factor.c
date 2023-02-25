@@ -39,7 +39,7 @@ int is_prime(int n)
 int main(void)
 {
 	long long n = 612852475143;
-	int largest = 0;
+	long long largest = 0;
 	long long i;
 
 	for (i = 2; i <= (n / 2); i++)
@@ -52,6 +52,7 @@ int main(void)
 			}
 		}
 	}
-	printf("%d\n", largest);
+	printf("%lld", largest);
+	printf("\n");
 	return (0);
 }
