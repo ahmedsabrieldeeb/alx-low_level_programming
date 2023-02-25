@@ -40,15 +40,18 @@ int main(void)
 {
 	long long n = 612852475143;
 	long long largest = 0;
-	long long i;
+	long long i, d;
 
-	for (i = 2; i <= (n / 2); i++)
+	d = n;
+
+	for (i = 2; i <= (d / 2); i++)
 	{
 		if (is_prime(i))
 		{
 			if (n % i == 0)
 			{
 				largest = i;
+				d = d / 2;
 			}
 		}
 	}
