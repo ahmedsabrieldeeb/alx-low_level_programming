@@ -41,27 +41,17 @@ int main(void)
 {
 	long n = 612852475143;
 	long largest = 0;
-	long i, d;
+	long i;
 
-	d = n;
-
-	for (i = 2; i <= d; i++)
+	for (i = 2; i <= n; i++)
 	{
-		if (is_prime(i))
+		if (n % i == 0)
 		{
-			if (d % i == 0)
-			{
-				largest = i;
-				d = d / i;
-
-				while (d % i == 0)
-				{
-					d = d / i;
-				}
-			}
-
+			largest = i;
+			n = n / i;
 		}
 	}
+
 	printf("%ld", largest);
 	printf("\n");
 	return (0);
