@@ -49,6 +49,7 @@ int main(void)
 			printf("%d ", i);
 		}
 	}
+
 	printf("%c", '\n');
 	return (0);
 }
