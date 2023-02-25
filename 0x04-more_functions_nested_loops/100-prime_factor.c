@@ -49,11 +49,17 @@ int main(void)
 	{
 		if (is_prime(i))
 		{
-			if (n % i == 0)
+			if (d % i == 0)
 			{
 				largest = i;
 				d = d / i;
+
+				while (d % i == 0)
+				{
+					d = d / i;
+				}
 			}
+
 		}
 	}
 	printf("%ld", largest);
