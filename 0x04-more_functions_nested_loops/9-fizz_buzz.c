@@ -11,6 +11,7 @@
  *
  * Return: 0 On success
  */
+
 int main(void)
 {
 	int i;
@@ -49,6 +50,5 @@ int main(void)
 		}
 	}
 	printf("%c", '\n');
-
-	return(0);
+	return (0);
 }
