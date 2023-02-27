@@ -58,7 +58,7 @@ void rev_string(char *s)
 	l = _strlen(s) - 1;
 	f = 0;
 
-	while ((f < (len / 2)) && (l > (len / 2)))
+	while ((f <= (len / 2)) && (l >= (len / 2)))
 	{
 		char temp;
 
