@@ -21,14 +21,39 @@ int _strlen(char *s)
 	return (len);
 }
 /**
+ * _puts - a function that prints a string, followed by a new line,
+ * to stdout.
+ * @str: the string to be outputed exactly
+ *
+ * Return: void
+ */
+
+void _puts(char *str)
+{
+	int i;
+
+	i = 0;
+
+	while (*(str + i) != '\0')
+	{
+		_putchar(*(str + i));
+		i++;
+	}
+	_putchar('\n');
+}
+/**
  * rev_string - a function that prints a string, in reverse,
  * followed by a new line.
  * @s: the string to be reversed
  *
  * Return: void.
  */
+
+
 void rev_string(char *s)
 {
+	_puts(s);
+
 	int len;
 
 	len = _strlen(s) - 1;
