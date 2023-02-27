@@ -8,5 +8,15 @@
 
 int _strlen(char *s)
 {
-	return ((sizeof(&s) / sizeof(s[0])) - 1);
+	int i, len;
+
+	i = 0;
+	size = 0;
+
+	while (*s[i] != '\0')
+	{	size++;
+		i++;
+	}
+
+	return (len);
 }
