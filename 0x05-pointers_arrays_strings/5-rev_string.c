@@ -52,15 +52,21 @@ void _puts(char *str)
 
 void rev_string(char *s)
 {
-	int len;
+	int f, l, len;
 
-	_puts(s);
-	len = _strlen(s) - 1;
+	len = _strlen(s);
+	l = _strlen(s) - 1;
+	f = 0;
 
-	while (len >= 0)
+	while ((f < (len / 2)) && (l > (len / 2)))
 	{
-		_putchar(*(s + len));
-		len--;
+		char temp;
+
+		temp = *(s + l);
+		*(s + l) = *(s + f);
+		*(s + f) = temp;
+		f++;
+		l--;
 	}
 	_putchar('\n');
 }
