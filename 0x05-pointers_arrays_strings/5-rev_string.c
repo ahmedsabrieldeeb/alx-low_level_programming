@@ -68,5 +68,4 @@ void rev_string(char *s)
 		f++;
 		l--;
 	}
-	_putchar('\n');
 }
