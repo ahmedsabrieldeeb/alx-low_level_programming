@@ -8,5 +8,5 @@
 
 int _strlen(char *s)
 {
-	return ((sizeof(s) / sizeof(s[0])) - 1);
+	return ((sizeof(&s) / sizeof(s[0])) - 1);
 }
