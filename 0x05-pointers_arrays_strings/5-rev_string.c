@@ -52,10 +52,9 @@ void _puts(char *str)
 
 void rev_string(char *s)
 {
-	_puts(s);
-
 	int len;
 
+	_puts(s);
 	len = _strlen(s) - 1;
 
 	while (len >= 0)
