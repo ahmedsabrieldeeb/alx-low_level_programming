@@ -38,7 +38,7 @@ char *_strcpy(char *dest, char *src)
 	len = _strlen(src);
 	i = 0;
 
-	while (i <= (len + 1))
+	while (i <= len)
 	{
 		*(dest + i) = *(src + i);
 		i++;
