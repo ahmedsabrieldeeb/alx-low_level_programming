@@ -34,7 +34,7 @@ void puts_half(char *str)
 {
 	int n;
 
-	n = ((_strlen(str)) - 1) / 2;
+	n = (((_strlen(str)) - 1) / 2) + 1;
 
 	while (*(str + n) != '\0')
 	{
