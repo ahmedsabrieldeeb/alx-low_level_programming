@@ -34,10 +34,9 @@ int _strlen(char *s)
 
 char *_strncat(char *dest, char *src, int n)
 {
-	int i, j, destLen, srcLen;
+	int i, j, destLen;
 
 	destLen = _strlen(dest);
-	srcLen = _strlen(src);
 	j = 0;
 
 	for (i = destLen; i < (destLen + n); i++)
