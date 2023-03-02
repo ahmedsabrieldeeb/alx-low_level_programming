@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strncpy - a function that copies a string.
+ * _strncpy - a function that copies a string
  * @dest: the destination string to be concatenated to
  * @src: the source string to concatenate
  * @n: the most bytes to concatenate to
@@ -13,13 +13,17 @@
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i;
+	int i, j;
 
 	for (i = 0; i < n; i++)
 	{
 		*(dest + i) = *(src + i);
 		if (*(src + i) == '\0')
 		{
+			for (j = i; j < n; j++)
+			{
+				*(dest + j) = '\0';
+			}
 			return (dest);
 		}
 	}
