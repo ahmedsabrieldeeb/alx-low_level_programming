@@ -30,10 +30,7 @@ char *leet(char *s)
 				*(s + i) = *(arr + j + 2);
 				break;
 			}
-			else
-			{
-				j += 3;
-			}
+			j += 3;
 		}
 		i++;
 	}
