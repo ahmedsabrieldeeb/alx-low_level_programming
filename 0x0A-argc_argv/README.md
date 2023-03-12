@@ -79,4 +79,4 @@ argv[1] = a
 argv[2] = b
 argv[3] = c
 
-> [source](http://crasseux.com/books/ctutorial/argc-and-argv.html){:target="_blank"}
+> <a href="http://crasseux.com/books/ctutorial/argc-and-argv.html" target="_blank">Source</a>
