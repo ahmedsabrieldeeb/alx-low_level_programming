@@ -32,8 +32,6 @@ char *str_concat(char *s1, char *s2)
 		i++;
 	}
 
-	printf("%d\n%d\n", size1, size2);
-
 	ptr = malloc(sizeof(char) * (size1 + size2 + 1));
 	if (ptr == NULL)
 		return (ptr);
