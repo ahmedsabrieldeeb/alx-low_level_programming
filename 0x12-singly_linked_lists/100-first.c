@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void __attribute__((contstructor)) print_statement(void);
+void print_statement(void) __attribute__((constructor));
 
 /**
  * print_statement - a function to print before main()
@@ -9,6 +9,6 @@ void __attribute__((contstructor)) print_statement(void);
  */
 void print_statement(void)
 {
-	printf("You're beat! and yet, you must \
+	printf("You're beat! and yet, you must\
 	allow,\nI bore my house upon my back!\n");
 }
