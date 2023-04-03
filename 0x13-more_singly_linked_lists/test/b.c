@@ -27,6 +27,7 @@ int main(void)
     head = new;
     n = listint_len(head);
     printf("-> %lu elements\n", n);
+	printf("-> %d\n", head->n);
     free(new);
     return (0);
 }
