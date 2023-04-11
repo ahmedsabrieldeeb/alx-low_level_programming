@@ -25,7 +25,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 		factor *= 2;
 		i++;
 	}
-
+	factor -= 1;
 	part = *n & factor;
 	*n = *n >> index;
 	*n = *n | 1;
