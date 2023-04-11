@@ -11,12 +11,20 @@
 
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int factor, part;
+	unsigned int i = 0;
+	unsigned long int factor = 1, part;
+
 	if (n == NULL)
 		return (-1);
 
 	if (index >= sizeof(unsigned long int) * 8)
 		return (-1);
+
+	while (i < index)
+	{
+		factor *= 2;
+		i++;
+	}
 
 	factor = 1 * (unsigned long int)index;
 	part = *n & factor;
