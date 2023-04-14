@@ -40,9 +40,7 @@ int main(int argc, char *argv[])
 	}
 	handle_errors(bytes_read, 'r', argv[1], NULL);
 
-	close(fd_from);
 	handle_errors(close(fd_from), 'c', argv[1], NULL);
-	close(fd_to);
 	handle_errors(close(fd_to), 'c', NULL, argv[2]);
 
 	return (0);
