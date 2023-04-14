@@ -59,16 +59,19 @@ int main(int argc, char *argv[])
 
 void handle_errors(int fd, char mode, char *file_from, char *file_to)
 {
-	switch (mode)
+	if (fd == -1)
 	{
-		case 'r':
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
-			exit(98);
-		case 'w':
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
-			exit(99);
-		case 'c':
-			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
-			exit(100);
+		switch (mode)
+		{
+			case 'r':
+					dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+					exit(98);
+			case 'w':
+				dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
+				exit(99);
+			case 'c':
+				dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+				exit(100);
+		}
 	}
 }
