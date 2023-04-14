@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 
 	while ((bytes_read = read(fd_from, buffer, buffsize)) > 0)
 	{
-		bytes_written = write(fd_to, buffer, buffsize);
+		bytes_written = write(fd_to, buffer, bytes_read);
 		handle_errors(bytes_written, 'w', NULL, argv[2]);
 	}
 	handle_errors(bytes_read, 'r', argv[1], NULL);
