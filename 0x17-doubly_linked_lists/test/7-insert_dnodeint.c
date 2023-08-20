@@ -34,9 +34,10 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (new_node);
 	}
 
-	/* Traverse searching for index */
+	/* Traverse searching for index within the middle */
 	while (temp != NULL)
 	{
+		/* case if inserting at the beginning*/
 		if (idx == 0)
 		{
 			temp->prev = new_node;
@@ -55,6 +56,19 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		}
 		order++;
 		temp = temp->next;
+	}
+
+	/* inserting at the end */
+	if (idx == order + 1)
+	{
+		new_node->next = NULL;
+
+		temp = *h;
+		while (temp->next != NULL)
+			temp = temp->next;
+
+		temp->next = new_node;
+		return(new_node);
 	}
 
 	/* idx is invalid */
