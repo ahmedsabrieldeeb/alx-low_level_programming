@@ -16,43 +16,29 @@
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *new_node = malloc(sizeof(dlistint_t)), *temp;
+	dlistint_t *new_node = NULL, *temp;
 	unsigned int order = 0;
 
 	/* handle argument invalidity */
 	if (h == NULL)
 		return (NULL);
 
-	/* handle malloc errros */
-	if (new_node ==  NULL)
-		return (NULL);
-
-	new_node->n = n;
 	temp = *h;
 
 	/* case if empty list and idx is 0 */
 	if (temp == NULL && idx == order)
-	{
-		*h = new_node;
-		new_node->next = NULL;
-		new_node->prev = NULL;
-		return (new_node);
-	}
+		return (add_dnodeint(h, n));
 
 	/* Traverse searching for index within the middle */
 	while (temp != NULL)
 	{
 		/* case if inserting at the beginning*/
 		if (idx == 0)
-		{
-			temp->prev = new_node;
-			new_node->next = temp;
-			new_node->prev = NULL;
-			*h = new_node;
-			return (new_node);
-		}
+			return (add_dnodeint(h, n));
 		if (order == idx)
 		{
+			new_node = malloc(sizeof(dlistint_t));
+			new_node->n = n;
 			temp->prev->next = new_node;
 			new_node->prev = temp->prev;
 			new_node->next = temp;
@@ -65,19 +51,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 	/* inserting at the end */
 	if (idx == order)
-	{
-		new_node->next = NULL;
-
-		temp = *h;
-		while (temp->next != NULL)
-			temp = temp->next;
-
-		new_node->prev = temp;
-		temp->next = new_node;
-		return(new_node);
-	}
+		return (add_dnodeint_end(h, n));
 
 	/* idx is invalid */
-	free(new_node);
-	return (NULL);
+	return (new_node);
 }
