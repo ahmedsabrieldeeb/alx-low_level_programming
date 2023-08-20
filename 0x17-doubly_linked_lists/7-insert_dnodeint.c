@@ -59,7 +59,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	}
 
 	/* inserting at the end */
-	if (idx == order + 1)
+	if (idx == order)
 	{
 		new_node->next = NULL;
 
