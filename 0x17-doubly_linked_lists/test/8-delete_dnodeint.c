@@ -1,57 +1,51 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "lists.h"
 
 /**
- * delete_dnodeint_at_index - a function that deletes node
- * at a given position.
- * @head: a real pointer to the first node
- * @index: the index to be deleted from
+ * delete_dnodeint_at_index - deletes the node at index
  *
- * Description: where index is the index of the list
- * where the new node should be added. Index starts at 0
- *
- * Return: Returns: 1 if it succeeded, -1 if it failed
+ * @head: head of the list
+ * @index: indexof the new node
+ * Return: 1 if it succeed, -1 if it failed
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	dlistint_t *temp;
-	unsigned int order = 0;
+	dlistint_t *h1;
+	dlistint_t *h2;
+	unsigned int i;
 
-	if (head ==  NULL)
-		return (-1);
+	h1 = *head;
 
-	if (*head == NULL)
-		return (-1);
+	if (h1 != NULL)
+		while (h1->prev != NULL)
+			h1 = h1->prev;
 
-	temp = *head;
-	while (temp != NULL)
+	i = 0;
+
+	while (h1 != NULL)
 	{
-		if (order == index)
+		if (i == index)
 		{
-			if (index == 0)
+			if (i == 0)
 			{
-				*head = temp->next;
-				temp->next->prev = NULL;
-				free(temp);
-				return (1);
+				*head = h1->next;
+				if (*head != NULL)
+					(*head)->prev = NULL;
 			}
 			else
 			{
-				temp->prev->next = temp->next;
-				temp->next->prev = temp->prev;
-				free(temp);
-				return (1);
+				h2->next = h1->next;
+
+				if (h1->next != NULL)
+					h1->next->prev = h2;
 			}
+
+			free(h1);
+			return (1);
 		}
-		order++;
-		temp = temp->next;
+		h2 = h1;
+		h1 = h1->next;
+		i++;
 	}
-	if (index == order)
-	{
-		temp->prev->next = NULL;
-		free(temp);
-		return (1);
-	}
+
 	return (-1);
 }
