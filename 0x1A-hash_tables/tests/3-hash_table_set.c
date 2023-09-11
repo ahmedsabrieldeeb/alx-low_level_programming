@@ -13,8 +13,8 @@
 */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int hash, index, count;
-	hash_node_t *new_node;
+	unsigned long int hash, index;
+	hash_node_t *new_node, *temp_ptr;
 
 	/* check validity of input args */
 	if (ht == NULL || key == NULL || *key == '\0')
@@ -29,20 +29,26 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (new_node == NULL)
 		return (0);
 
-	/* fill the node with key:value pair */
-	new_node->key = strdup(key);
+	/* fill the node with data */
+	new_node->key = (char *)key;
 	new_node->value = strdup(value);
 	new_node->next = NULL;
 
-	/* insert if no collision */
+	/* handle collision */
 	if (ht->array[index] == NULL)
 		ht->array[index] = new_node;
-	/* handle the collision */
 	else
 	{
-		for (count = 0; ht->array[count]->next != NULL; count++)
-			continue;
-		ht->array[count]->next = new_node;
+		temp_ptr = new_node;
+		while (1)
+		{
+			if (temp_ptr->next == NULL)
+			{
+				temp_ptr->next = new_node;
+				break;
+			}
+			temp_ptr = temp_ptr->next;
+		}
 	}
 	return (1);
 }
