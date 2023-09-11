@@ -39,7 +39,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		ht->array[index] = new_node;
 	else
 	{
-		temp_ptr = new_node;
+		temp_ptr = ht->array[index];
 		while (1)
 		{
 			if (temp_ptr->next == NULL)
