@@ -26,17 +26,20 @@ void hash_table_print(const hash_table_t *ht)
 		if (ht->array[count] == NULL)
 			continue;
 
-		if (first_element == 1)
-		{
-			printf("'%s': '%s'", ht->array[count]->key, ht->array[count]->value);
-			first_element = 0;
-		}
-
 		node = ht->array[count];
 		while (node != NULL)
 		{
-			printf(", '%s': '%s'", node->key, node->value);
-			node = node->next;
+			if (first_element == 1)
+			{
+				printf("'%s': '%s'", ht->array[count]->key, ht->array[count]->value);
+				first_element = 0;
+				node = node->next;
+			}
+			else
+			{
+				printf(", '%s': '%s'", node->key, node->value);
+				node = node->next;
+			}
 		}
 	}
 	printf("}\n");
