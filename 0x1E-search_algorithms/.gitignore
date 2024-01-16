@@ -1,0 +1,14 @@
+# Ignore compiled C files
+*.o
+*.out
+
+# Ignore executable files
+*.exe
+*.bin
+
+# Ignore files containing the word "main"
+*main*
+
+# Ignore files starting with numbers but not ending with .c
+[0-9]*
+![0-9]*.c
