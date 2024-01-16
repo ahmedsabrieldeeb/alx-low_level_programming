@@ -13,7 +13,7 @@ SRC_LINEAR = 0-linear.c 0-main.c
 TARGET_LINEAR = 0-linear
 
 # binary search build
-SRC_BINARY = 0-binary.c 1-main.c
+SRC_BINARY = 1-binary.c 1-main.c
 TARGET_BINARY = 1-binary
 
 # phony my targets to avoid naming conflicts
